@@ -1,36 +1,29 @@
 package ru.netology.javaoopproject.Radio;
 
 public class Radio {
-    public int currentVolume;
 
-    public void setToMaxVolume() {
-        currentVolume = 9;
+    private final int stationAmount;
+
+    public Radio() {
+        this.stationAmount = 10;
     }
 
-    public void setToMinVolume() {
-        currentVolume = 1;
+    public Radio(int stationAmount) {
+        this.stationAmount = stationAmount;
     }
 
-    public void increaseVolume() {
-        if (currentVolume >= 9) {
-            currentVolume = currentVolume + 0;
-        } else {
-            currentVolume++;
-        }
-    }
-
-    public void decreaseVolume() {
-        if (currentVolume <= 1) {
-            currentVolume = currentVolume + 0;
-        } else {
-            currentVolume--;
-        }
+    public int getStationAmount() {
+        return stationAmount;
     }
 
     public int currentStation;
 
+    public int getCurrentStation() {
+        return currentStation;
+    }
+
     public void setToLastStation() {
-        currentVolume = 9;
+        currentStation = 9;
     }
 
     public void setToFirstStation() {
@@ -50,7 +43,31 @@ public class Radio {
             currentStation += 9;
         } else {
             currentStation--;
+        }
+    }
+    public int currentVolume;
 
+    public void setToMaxVolume() {
+        currentVolume = 99;
+    }
+
+    public void setToMinVolume() {
+        currentVolume = 0;
+    }
+
+    public void increaseVolume() {
+        if (currentVolume >= 99) {
+            currentVolume = currentVolume + 0;
+        } else {
+            currentVolume++;
+        }
+    }
+
+    public void decreaseVolume() {
+        if (currentVolume <= 1) {
+            currentVolume = currentVolume + 0;
+        } else {
+            currentVolume--;
         }
     }
 }
