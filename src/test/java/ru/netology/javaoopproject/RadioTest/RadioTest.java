@@ -19,9 +19,7 @@ public class RadioTest {
     public void getStationAmountIfDoNotWantPoint() {
         Radio radio = new Radio();
 
-        radio.setCurrentStation(9);
-
-        Assertions.assertEquals(9, radio.getCurrentStation());
+        Assertions.assertEquals(9, radio.getStationAmount());
     }
 
     @Test
